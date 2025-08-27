@@ -26,7 +26,7 @@ function App() {
     formData.append('api_key', apiKey);
     formData.append('template', file);
     try {
-      const response = await axios.post('/api/generate', formData, {
+      const response = await axios.post('https://your-text-your-style.onrender.com/api/generate', formData, {
         responseType: 'blob',
       });
       const url = window.URL.createObjectURL(new Blob([response.data]));
